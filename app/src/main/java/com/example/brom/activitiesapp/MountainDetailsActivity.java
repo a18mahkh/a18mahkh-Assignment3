@@ -23,8 +23,8 @@ public class MountainDetailsActivity extends AppCompatActivity {
         /*TextView textView2 = (TextView) findViewById(R.id.mountainLocation);
         textView2.setText(mountainLocation);*/
 
-        TextView textViewHeight = (TextView) findViewById(R.id.mountainHeight);
-        textViewHeight.setText(mountainHeight);
+        /*TextView textViewHeight = (TextView) findViewById(R.id.mountainHeight);
+        textViewHeight.setText(mountainHeight);*/
 
     }
 }
