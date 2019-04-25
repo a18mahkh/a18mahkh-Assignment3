@@ -1,10 +1,16 @@
 package com.example.brom.activitiesapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.media.Image;
+import android.media.ImageWriter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+// 2. Create a new activity named "MountainDetailsActivity
 public class MountainDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -13,18 +19,30 @@ public class MountainDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mountaindetails);
 
         Intent intent = getIntent();
-        String mountainName = intent.getStringExtra("mountainName");
-        // String mountainLocation = intent.getStringExtra("mountainLocation");
-        String mountainHeight = intent.getStringExtra("mountainHeight");
+        String mountainDetails=intent.getStringExtra("mountainDetails");
 
-        TextView textView = (TextView) findViewById(R.id.mountainName);
-        textView.setText(mountainName);
 
-        /*TextView textView2 = (TextView) findViewById(R.id.mountainLocation);
-        textView2.setText(mountainLocation);*/
 
-        /*TextView textViewHeight = (TextView) findViewById(R.id.mountainHeight);
-        textViewHeight.setText(mountainHeight);*/
+        if (mountainDetails != null) {
+
+            TextView textView = (TextView) findViewById(R.id.mountainName);
+            textView.setText(mountainDetails);
+            /*Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/abc.ttf");
+
+            textView.setTypeface(custom_font);*/
+
+        }
+
+
+       /* ImageView goBackBtn=findViewById(R.id.bt_go_back);
+        goBackBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                finish();
+            }
+        });*/
 
     }
+
 }

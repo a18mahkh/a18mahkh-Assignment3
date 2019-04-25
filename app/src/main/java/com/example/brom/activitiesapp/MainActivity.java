@@ -43,22 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 int bergHojd = mountainHeights[position];
                 String bergHojdStr= Integer.toString(bergHojd);
                 String bergNamn = mountainNames[position];
-
-               // Toast.makeText(getApplicationContext(), String.valueOf(bergNamn) + ": " + bergHojd + " Meter", Toast.LENGTH_SHORT).show();
-                //Toast.makeText(getApplicationContext(), String.valueOf(bergHojd) + " Meter", Toast.LENGTH_SHORT).show();
+                String bergPlats=mountainLocations[position];
 
                 Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
-                intent.putExtra("mountainName", bergNamn);
-                //  intent.putExtra("mountainLocation", bergPlats);
-                intent.putExtra("mountainHeight", bergHojdStr);
+                intent.putExtra("mountainDetails", "Berget " + bergNamn + " är " + bergHojdStr + " meter hög och ligger i " + bergPlats + ".");
+
                 startActivity(intent);
 
             }
         });
 
 
-        // 1. Create a ListView as in previous assignment
-        // 2. Create a new activity named "MountainDetailsActivity
         // 3. Create a new Layout file for the MountainDetailsActivity called
         //    "activity_mountaindetails". MountainDetailsActivity must have MainActivity as its
         //    ´parent activity.

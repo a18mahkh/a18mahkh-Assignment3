@@ -4,42 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+
     tools:context="com.example.brom.activitiesapp.MountainDetailsActivity">
 
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view"
-            android:layout_width="384dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            card_view:cardCornerRadius="4dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="314dp"
+        android:layout_height="485dp"
+        android:layout_gravity="center"
 
-                <TextView
-                    android:id="@+id/mountainName"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingBottom="16dp"
-                    android:textSize="14sp" />
+        app:cardCornerRadius="10dp">
 
-                <!--<TextView
-            android:id="@+id/mountainLocation"
+
+        <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp" />-->
+            android:layout_height="318dp"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/montblanc" />
 
-                <!-- <TextView
-            android:id="@+id/mountainHeight"
+        <TextView
+            android:id="@+id/mountainName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp" />-->
+            android:layout_height="96dp"
+            android:layout_marginTop="320dp"
+            android:padding="20dp"
+            android:textSize="16sp" />
 
-        </android.support.v7.widget.CardView>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>
