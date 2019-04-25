@@ -1,5 +1,6 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,11 +41,17 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
                 int bergHojd = mountainHeights[position];
+                String bergHojdStr= Integer.toString(bergHojd);
                 String bergNamn = mountainNames[position];
 
-                Toast.makeText(getApplicationContext(), String.valueOf(bergNamn) + ": " + bergHojd + " Meter", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), String.valueOf(bergNamn) + ": " + bergHojd + " Meter", Toast.LENGTH_SHORT).show();
                 //Toast.makeText(getApplicationContext(), String.valueOf(bergHojd) + " Meter", Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
+                intent.putExtra("mountainName", bergNamn);
+                //  intent.putExtra("mountainLocation", bergPlats);
+                intent.putExtra("mountainHeight", bergHojdStr);
+                startActivity(intent);
 
             }
         });
