@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -15,10 +17,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
+   // private int[] mountainImages=[R.drawable.denali, R.drawable.matterhorn, R.drawable.montblanc];
     private String[] mountainLocations = {"Alps","Alps","Alaska"};
     private int[] mountainHeights ={4478,4808,6190};
     // Create ArrayLists from the raw data above and use these lists when populating your ListView.
     List<String> listData=new ArrayList<String>(Arrays.asList(mountainNames));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
@@ -45,13 +51,27 @@ public class MainActivity extends AppCompatActivity {
                 String bergNamn = mountainNames[position];
                 String bergPlats=mountainLocations[position];
 
+                /*if(position==0){
+                    ImageView imageView = view.findViewById(R.id.myImageView);
+                    imageView.setImageResource(R.drawable.matterhorn);
+                }else if(position==1){
+                    ImageView imageView = view.findViewById(R.id.myImageView);
+                    imageView.setImageResource(R.drawable.montblanc);
+                }else{
+                    ImageView imageView = view.findViewById(R.id.myImageView);
+                    imageView.setImageResource(R.drawable.denali);
+                }*/
+
+
                 Intent intent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
                 intent.putExtra("mountainDetails", "Berget " + bergNamn + " är " + bergHojdStr + " meter hög och ligger i " + bergPlats + ".");
+
 
                 startActivity(intent);
 
             }
         });
+
 
 
         // 3. Create a new Layout file for the MountainDetailsActivity called

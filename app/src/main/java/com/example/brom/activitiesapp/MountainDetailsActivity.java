@@ -6,6 +6,7 @@ import android.media.Image;
 import android.media.ImageWriter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,14 +35,14 @@ public class MountainDetailsActivity extends AppCompatActivity {
         }
 
 
-       /* ImageView goBackBtn=findViewById(R.id.bt_go_back);
+       Button goBackBtn=findViewById(R.id.goBackBtn);
         goBackBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
                 finish();
             }
-        });*/
+        });
 
     }
 

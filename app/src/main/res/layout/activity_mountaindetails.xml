@@ -19,11 +19,12 @@
 
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/myImageView"
             android:layout_width="match_parent"
             android:layout_height="318dp"
             android:layout_marginTop="-5dp"
-            android:src="@drawable/montblanc" />
+            android:src="@drawable/matterhorn"
+            />
 
         <TextView
             android:id="@+id/mountainName"
@@ -31,7 +32,27 @@
             android:layout_height="96dp"
             android:layout_marginTop="320dp"
             android:padding="20dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <Button
+            android:id="@+id/goBackBtn"
+            android:background="@drawable/mybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/images"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="425dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Go Back"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            />
 
 
     </android.support.v7.widget.CardView>
